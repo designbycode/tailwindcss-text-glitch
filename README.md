@@ -84,11 +84,11 @@ To make it work you only need to add the class of ```.text-glitch``` to you html
 
 #### Available duration values for glitch effect
 
-| Key    | Value | Output              |
-|:-------|:------|:--------------------| 
-| fast   | 1s    | .text-glitch-fast   |
-| normal | 3s    | .text-glitch-normal |
-| slow   | 5s    | .text-glitch-slow   |
+| Key    | Value | Full Class                   |
+|:-------|:------|:-----------------------------| 
+| fast   | 1s    | .text-glitch-duration-fast   |
+| normal | 3s    | .text-glitch-duration-normal |
+| slow   | 5s    | .text-glitch-duration-slow   |
 
 ## Configuration
 
