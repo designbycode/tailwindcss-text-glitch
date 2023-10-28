@@ -1,0 +1,84 @@
+{
+  "name": "@designbycode/tailwindcss-text-glitch",
+  "version": "1.0.0",
+  "description": "Tailwindcss utilities for text glitch",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designbycode/tailwindcss-text-glitch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/designbycode/tailwindcss-text-glitch/issues"
+  },
+  "homepage": "https://github.com/designbycode/tailwindcss-text-glitch#readme",
+  "authors": [
+    {
+      "name": "Claude Myburgh",
+      "email": "claude@designbycode.co.za",
+      "url": "https://designbycode.co.za"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/designbycode/tailwindcss-text-glitch/blob/main/LICENCE"
+    }
+  ],
+  "keywords": [
+    "front-end",
+    "frontend",
+    "css",
+    "tailwindcss",
+    "plugin",
+    "tailwindcss-plugin",
+    "tailwindcss text glitch",
+    "designbycode"
+  ],
+  "type": "module",
+  "files": [
+    "dist",
+    "utils"
+  ],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "clean": "rd /s /q dist .cache>nul 2>&1|echo.>nul",
+    "dev": "pnpm build --watch",
+    "postbuild": "tsc --emitDeclarationOnly",
+    "prepublishOnly": "pnpm build"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    "> .5% or last 2 versions"
+  ],
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0 || >=3.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.6",
+    "autoprefixer": "^10.4.15",
+    "husky": "^8.0.3",
+    "postcss": "^8.4.28",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.3.3",
+    "terser": "^5.19.2",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.5.2"
+  }
+}
